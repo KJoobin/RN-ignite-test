@@ -291,8 +291,12 @@ PODS:
   - React-jsinspector (0.67.2)
   - React-logger (0.67.2):
     - glog
-  - react-native-safe-area-context (3.1.8):
-    - React-Core
+  - react-native-safe-area-context (4.2.5):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React
+    - ReactCommon/turbomodule/core
   - React-perflogger (0.67.2)
   - React-RCTActionSheet (0.67.2):
     - React-Core/RCTActionSheetHeaders (= 0.67.2)
@@ -593,7 +597,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 52beb652bbc61201bd70cbe4f0b8edb607e8da4f
   React-jsinspector: 595f76eba2176ebd8817a1fffd47b84fbdab9383
   React-logger: 23de8ea0f44fa00ee77e96060273225607fd4d78
-  react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
+  react-native-safe-area-context: ebf8c413eb8b5f7c392a036a315eb7b46b96845f
   React-perflogger: 3c9bb7372493e49036f07a82c44c8cf65cbe88db
   React-RCTActionSheet: 052606483045a408693aa7e864410b4a052f541a
   React-RCTAnimation: 08d4cac13222bb1348c687a0158dfd3b577cdb63

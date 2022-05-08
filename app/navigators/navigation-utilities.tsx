@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from "react"
-import { BackHandler } from "react-native"
+import { useState, useEffect, useRef } from 'react'
+import { BackHandler } from 'react-native'
 import {
   PartialState,
   NavigationState,
   NavigationAction,
   createNavigationContainerRef,
-} from "@react-navigation/native"
+} from '@react-navigation/native'
 
 /* eslint-disable */
 export const RootNavigation = {
@@ -72,7 +72,7 @@ export function useBackButtonHandler(canExit: (routeName: string) => boolean) {
     }
 
     // Subscribe when we come to life
-    const hardwareBackPress = BackHandler.addEventListener("hardwareBackPress", onBackPress)
+    const hardwareBackPress = BackHandler.addEventListener('hardwareBackPress', onBackPress)
 
     // Unsubscribe when we're done
     return () => hardwareBackPress.remove();

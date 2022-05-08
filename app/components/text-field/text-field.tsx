@@ -1,8 +1,8 @@
-import React from "react"
-import { StyleProp, TextInput, TextInputProps, TextStyle, View, ViewStyle } from "react-native"
-import { color, spacing, typography } from "../../theme"
-import { translate, TxKeyPath } from "../../i18n"
-import { Text } from "../text/text"
+import React from 'react'
+import { StyleProp, TextInput, TextInputProps, TextStyle, View, ViewStyle } from 'react-native'
+import { color, spacing, typography } from '../../theme'
+import { translate, TxKeyPath } from '../../i18n'
+import { Text } from '../text/text'
 
 // the base styling for the container
 const CONTAINER: ViewStyle = {
@@ -71,7 +71,7 @@ export function TextField(props: TextFieldProps) {
     placeholder,
     labelTx,
     label,
-    preset = "default",
+    preset = 'default',
     style: styleOverride,
     inputStyle: inputStyleOverride,
     forwardedRef,

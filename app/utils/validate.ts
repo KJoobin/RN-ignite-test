@@ -1,4 +1,4 @@
-const ValidateJS = require("validate.js")
+const ValidateJS = require('validate.js')
 
 // HACK(steve): wierd typescript situation because of strange typings
 const Validate: any = ValidateJS.default ? ValidateJS.default : ValidateJS
@@ -70,7 +70,7 @@ export interface ValidationErrors {
  * @param data The object to validate.
  */
 export function validate(rules: ValidationRules, data: Record<string, unknown>): ValidationErrors {
-  if (typeof data !== "object") {
+  if (typeof data !== 'object') {
     return {} as ValidationErrors
   }
   return Validate(data, rules, { fullMessages: false }) || {}

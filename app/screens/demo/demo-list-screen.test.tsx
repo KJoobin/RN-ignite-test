@@ -13,22 +13,22 @@ describe('DemoListScreen', () => {
   };
 
   const route = {
-    key: 'stackNavigation',
+    key: 'demoList-key',
     name: 'demoList' as const,
     path: '/demoList'
   }
 
-  it('renders', () => {
-    const { queryByText, debug } = render((
-      <RootStoreProvider value={({characterStore} as any)}>
-        <DemoListScreen
-          navigation={mockStackNavigation}
-          route={route}
-        />
-      </RootStoreProvider>
-    ))
+  const renderDemoListScreen = () => render((
+    <RootStoreProvider value={({characterStore} as any)}>
+      <DemoListScreen
+        navigation={mockStackNavigation}
+        route={route}
+      />
+    </RootStoreProvider>
+  ))
 
-    debug();
+  it('renders header "Demo List"', () => {
+    const { queryByText } = renderDemoListScreen();
 
     expect(queryByText('Demo List')).not.toBeNull();
   })

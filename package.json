@@ -32,10 +32,9 @@
     "@react-navigation/native": "~6.0.1",
     "@react-navigation/native-stack": "^6.0.2",
     "@react-navigation/stack": "~6.0.1",
+    "@testing-library/react-native": "^9.1.0",
     "apisauce": "2.0.0",
     "expo": "~44.0.6",
-    "expo-linear-gradient": "^11.0.3",
-    "expo-localization": "12.0.1",
     "expo-modules-core": "^0.6.5",
     "i18n-js": "3.8.0",
     "mobx": "6.1.8",
@@ -45,6 +44,8 @@
     "react-native": "0.67.2",
     "react-native-gesture-handler": "1.10.3",
     "react-native-keychain": "6.2.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-localize": "^2.2.1",
     "react-native-safe-area-context": "3.1.8",
     "react-native-screens": "3.8.0",
     "reactotron-mst": "3.1.4",
@@ -72,7 +73,7 @@
     "@typescript-eslint/parser": "4.10.0",
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
-    "detox": "19.3.0",
+    "detox": "19.6.5",
     "eslint": "7.15.0",
     "eslint-config-prettier": "7.0.0",
     "eslint-config-standard": "16.0.2",
@@ -106,7 +107,7 @@
   "prettier": {
     "printWidth": 100,
     "semi": false,
-    "singleQuote": false,
+    "singleQuote": true,
     "trailingComma": "all"
   },
   "detox": {
@@ -114,11 +115,11 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/PizzaApp.app",
-        "build": "xcodebuild -workspace ios/PizzaApp.xcworkspace -scheme PizzaApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -destination 'name=iPhone 11'",
+        "build": "xcodebuild -workspace ios/PizzaApp.xcworkspace -scheme PizzaApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -destination 'name=iPhone 13'",
         "type": "ios.simulator",
         "device": {
-          "name": "iPhone 11",
-          "os": "iOS 13.2"
+          "name": "iPhone 13",
+          "os": "iOS 15.4"
         }
       },
       "ios.sim.release": {
@@ -127,7 +128,7 @@
         "type": "ios.simulator",
         "device": {
           "name": "iPhone 11",
-          "os": "iOS 13.2"
+          "os": "iOS 15.4"
         }
       }
     }
@@ -190,7 +191,7 @@
       "no-undef": 0,
       "no-unused-vars": 0,
       "no-use-before-define": "off",
-      "quotes": 0,
+      "quotes": 1,
       "react-native/no-raw-text": 0,
       "react/no-unescaped-entities": 0,
       "react/prop-types": "off",

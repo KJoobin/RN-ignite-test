@@ -35,7 +35,7 @@ export async function setupRootStore() {
     data = (await storage.load(ROOT_STATE_STORAGE_KEY)) || {}
     rootStore = RootStoreModel.create(data, env)
   } catch (e) {
-    // if there's any problems loading, then let's at least fallback to an empty state
+    // if there's any problems loading, then lets at least fallback to an empty state
     // instead of crashing.
     rootStore = RootStoreModel.create({}, env)
 

@@ -1,11 +1,11 @@
-import React, { useEffect, FC } from "react"
-import { FlatList, TextStyle, View, ViewStyle, ImageStyle } from "react-native"
-import { StackScreenProps } from "@react-navigation/stack"
-import { observer } from "mobx-react-lite"
-import { Header, Screen, Text, AutoImage as Image, GradientBackground } from "../../components"
-import { color, spacing } from "../../theme"
-import { useStores } from "../../models"
-import { NavigatorParamList } from "../../navigators"
+import React, { useEffect, FC } from 'react'
+import { FlatList, TextStyle, View, ViewStyle, ImageStyle } from 'react-native'
+import { StackScreenProps } from '@react-navigation/stack'
+import { observer } from 'mobx-react-lite'
+import { Header, Screen, Text, AutoImage as Image, GradientBackground } from '../../components'
+import { color, spacing } from '../../theme'
+import { useStores } from '../../models'
+import { NavigatorParamList } from '../../navigators'
 
 const FULL: ViewStyle = {
   flex: 1,
@@ -20,14 +20,14 @@ const HEADER: TextStyle = {
 }
 const HEADER_TITLE: TextStyle = {
   fontSize: 12,
-  fontWeight: "bold",
+  fontWeight: 'bold',
   letterSpacing: 1.5,
   lineHeight: 15,
-  textAlign: "center",
+  textAlign: 'center',
 }
 const LIST_CONTAINER: ViewStyle = {
-  alignItems: "center",
-  flexDirection: "row",
+  alignItems: 'center',
+  flexDirection: 'row',
   padding: 10,
 }
 const IMAGE: ImageStyle = {
@@ -42,7 +42,7 @@ const FLAT_LIST: ViewStyle = {
   paddingHorizontal: spacing[4],
 }
 
-export const DemoListScreen: FC<StackScreenProps<NavigatorParamList, "demoList">> = observer(
+export const DemoListScreen: FC<StackScreenProps<NavigatorParamList, 'demoList'>> = observer(
   ({ navigation }) => {
     const goBack = () => navigation.goBack()
 
@@ -59,7 +59,7 @@ export const DemoListScreen: FC<StackScreenProps<NavigatorParamList, "demoList">
 
     return (
       <View testID="DemoListScreen" style={FULL}>
-        <GradientBackground colors={["#422443", "#281b34"]} />
+        <GradientBackground colors={['#422443', '#281b34']} />
         <Screen style={CONTAINER} preset="fixed" backgroundColor={color.transparent}>
           <Header
             headerTx="demoListScreen.title"

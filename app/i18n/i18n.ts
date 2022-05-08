@@ -1,15 +1,15 @@
-import * as Localization from "expo-localization"
-import i18n from "i18n-js"
-import en from "./en.json"
-import ja from "./ja.json"
+import * as RNLocalize from 'react-native-localize';
+import i18n from 'i18n-js'
+import en from './en.json'
+import ja from './ja.json'
 
 i18n.fallbacks = true
 i18n.translations = { en, ja }
 
-i18n.locale = Localization.locale || "en"
+i18n.locale = RNLocalize.findBestAvailableLanguage(['kr', 'en'])?.languageTag || 'en'
 
 /**
- * Builds up valid keypaths for translations.
+ * Builds up valid key-paths for translations.
  * Update to your default locale of choice if not English.
  */
 type DefaultLocale = typeof en
